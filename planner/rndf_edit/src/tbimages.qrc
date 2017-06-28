@@ -1,0 +1,19 @@
+<RCC>
+    <qresource prefix="/tbimages" >
+        <file>tbimages/crosswalk.png</file>
+        <file>tbimages/exit.png</file>
+        <file>tbimages/lane.png</file>
+        <file>tbimages/minus.png</file>
+        <file>tbimages/open.png</file>
+        <file>tbimages/perimeter.png</file>
+        <file>tbimages/perimeterpoint.png</file>
+        <file>tbimages/quit.png</file>
+        <file>tbimages/save.png</file>
+        <file>tbimages/segment.png</file>
+        <file>tbimages/spot.png</file>
+        <file>tbimages/spotpoint.png</file>
+        <file>tbimages/traffic_light.png</file>
+        <file>tbimages/waypoint.png</file>
+        <file>tbimages/zone.png</file>
+    </qresource>
+</RCC>

@@ -1,0 +1,5 @@
+<launch>
+  <include file="$(find velodyne)/launch/VelodyneParam.launch" />
+  <node name="velodyne" pkg="velodyne" type="velodyne" launch-prefix="xterm -e gdb --args" output="screen">
+  </node>
+</launch>

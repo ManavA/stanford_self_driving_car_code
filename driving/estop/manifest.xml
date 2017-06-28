@@ -1,0 +1,16 @@
+<package>
+  <description brief="estop">
+
+     estop
+
+  </description>
+  <author>Stanford Driving</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/estop</url>
+  <depend package="dgcglobal"/>
+  <depend package="driving_common"/>
+
+</package>
+
+

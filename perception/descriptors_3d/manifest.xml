@@ -1,0 +1,23 @@
+<package>
+  <description brief="descriptors_3d">
+
+     Feature descriptor library for 3-D data
+     
+  </description>
+  <author>Daniel Munoz/ dmunoz@willowgarage.com</author>
+  <license>BSD</license>
+  <url>http://pr.willowgarage.com/wiki/descriptors_3d</url>
+  <review status="unreviewed" notes=""/>
+
+  <depend package="roscpp" />
+  <depend package="eigen" />
+  <depend package="opencv2" />
+  <depend package="bullet" />
+  <depend package="point_cloud_mapping" />
+
+  <export>
+    <cpp cflags="-I${prefix}/include" lflags="-L${prefix}/lib -Wl,-rpath ${prefix}/lib -ldescriptors_3d" />
+  </export>
+</package>
+
+

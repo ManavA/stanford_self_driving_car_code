@@ -1,0 +1,18 @@
+<package>
+  <description brief="kdtree">
+
+     kdtree
+
+  </description>
+  <author>Stanford Driving</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/kdtree</url>
+  <depend package="dgcglobal"/>
+  <export>
+    <cpp cflags="-I${prefix}/include" lflags="-L${prefix}/lib -lkdtree -lbucket"/>
+  </export>
+
+</package>
+
+

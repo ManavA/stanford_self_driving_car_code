@@ -1,0 +1,24 @@
+<package>
+  <description brief="vehiclesim">
+
+     vehiclesim
+
+  </description>
+  <author>Stanford Driving</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/vehiclesim</url>
+  <depend package="tf"/>
+  <depend package="lltransform"/>
+  <depend package="applanix"/>
+  <depend package="localize"/>
+  <depend package="perception"/>
+  <depend package="dgcglobal"/>
+  <depend package="driving_common"/>
+  <export>
+    <cpp cflags="-I${prefix}/include" lflags="-L${prefix}/lib -lvehicle"/>
+  </export>
+
+</package>
+
+

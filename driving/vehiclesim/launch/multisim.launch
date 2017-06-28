@@ -1,0 +1,31 @@
+<launch>
+  <include file="$(find driving_common)/launch/common.launch"/>
+  <include file="$(find driving_common)/launch/sensor_params.launch"/>
+  <include file="$(find passat)/launch/VehicleParams.launch"/>
+  <!-- param name="/driving/simulator/vehicle_color_red" value="1.0" -->
+  <!-- param name="/driving/simulator/vehicle_color_green" value="0.0" -->
+  <!-- param name="/driving/simulator/vehicle_color_blue" value="0.0" -->
+  <!-- param name="/driving/simulator/vehicle_start_latitude" value="37.4298675" -->
+  <!-- param name="/driving/simulator/vehicle_start_longitude" value="-122.1814473" -->
+  <param name="/driving/simulator/vehicle_start_latitude" value="37.4313080000000" />
+  <param name="/driving/simulator/vehicle_start_longitude" value="-122.1837390000000" />
+  <param name="/driving/simulator/vehicle_start_theta" value="1.271946" />
+  <param name="/driving/simulator/vehicle_start_velocity" value="0.0" />
+  <param name="/driving/simulator/bicycle_model" value="false" />
+  <param name="/driving/simulator/torque_mode" value="true" />
+  <param name="/driving/simulator/obstacle_map" value="noname" />
+  <param name="/driving/simulator/simulate_laser" value="false" />
+  <param name="/driving/simulator/laser_max_range" value="50.0" />
+  <param name="/driving/simulator/track_max_range" value="30.0" />
+  <param name="/driving/simulator/radar_max_range" value="50.0" />
+  <param name="/driving/simulator/fake_perception" value="true" />
+  <param name="/driving/simulator/traffic_light_switch_states" value="false" />
+  <param name="/driving/simulator/traffic_light_state_duration" value="	10.0" />
+  <param name="/driving/simulator/traffic_light_yellow_duration" value="	3.0" />
+  <param name="/driving/simulator/crosswalk_max_wait_time" value="30.0" />
+  <param name="/driving/simulator/crosswalk_min_pedestrian_speed" value="1.0" />
+  <param name="/driving/simulator/crosswalk_max_pedestrian_speed" value="5.0" />
+  <param name="/driving/simulator/crosswalk_generate_pedestrians" value="false" />
+  <node name="multisim" pkg="vehiclesim" type="multisim" >
+  </node>
+</launch>

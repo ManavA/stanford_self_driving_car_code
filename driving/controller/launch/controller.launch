@@ -1,0 +1,5 @@
+<launch>
+  <include file="$(find controller)/launch/ControllerParam.launch" />
+  <node name="controller" pkg="controller" type="controller">
+  </node>
+</launch>

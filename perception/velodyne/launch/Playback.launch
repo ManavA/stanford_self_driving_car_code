@@ -1,0 +1,11 @@
+<launch>
+  <include file="$(find velodyne)/launch/VelodyneParam.launch" />
+  <node pkg="nodelet" type="nodelet" name="standalone_nodelet" args="manager" launch_prefix="xterm -e gdb --args"/>
+
+  <node pkg="nodelet" type="nodelet" name="Project3D"
+        args="load velodyne/Project3D standalone_nodelet" output="screen" launch_prefix="xterm -e gdb --args">
+  </node>
+  <node pkg="nodelet" type="nodelet" name="Points"
+        args="load velodyne/Points standalone_nodelet" launch_prefix="xterm -e gdb --args">
+  </node>
+</launch>

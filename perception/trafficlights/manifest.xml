@@ -1,0 +1,26 @@
+<package>
+  <description brief="trafficlights">
+
+     perception
+
+  </description>
+  <author>Stanford Driving</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/perception</url>
+  <depend package="driving_common"/>
+  <depend package="multibooster"/>
+  <depend package="sensor_msgs"/> 
+  <depend package="opencv2"/>
+  <depend package="applanix"/>
+  <depend package="localize"/>
+  <depend package="aw_chsm_planning"/>
+  <depend package="aw_rndf"/>
+
+  <export>
+    <cpp cflags="-I${prefix}/include" />
+  </export>
+  
+</package>
+
+

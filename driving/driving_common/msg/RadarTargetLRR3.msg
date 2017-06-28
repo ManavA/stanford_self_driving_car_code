@@ -1,0 +1,16 @@
+int32 id
+int8 measured
+int8 historical
+int8 valid
+int8 moving_state
+float32 long_distance
+float32 long_relative_velocity
+float32 long_relative_acceleration
+float32 long_distance_std
+float32 long_velocity_std
+float32 long_acceleration_std
+float32 lateral_distance
+float32 lateral_relative_velocity
+float32 lateral_distance_std
+float32 prob_exist
+float32 prob_obstacle

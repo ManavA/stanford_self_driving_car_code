@@ -1,0 +1,19 @@
+<package>
+  <description brief="vehiclemodels">
+
+     vehicle models :-)
+
+  </description>
+  <author>Stanford Driving</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/vehiclemodels</url>
+  <depend package="dgcglobal"/>
+  <depend package="glsupport"/>
+  <export>
+    <cpp cflags="-I${prefix}/include" lflags="-L${prefix}/lib -lvehiclemodels"/>
+  </export>
+
+</package>
+
+

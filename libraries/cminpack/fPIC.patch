@@ -1,0 +1,11 @@
+--- Makefile.orig	2009-02-27 16:40:06.000000000 +0100
++++ Makefile	2009-03-31 12:17:26.000000000 +0200
+@@ -3,7 +3,7 @@
+ 
+ #CC=cc
+ CC=gcc
+-CFLAGS= -O2 -g -Wall -Wextra -I.
++CFLAGS= -fPIC -O2 -g -Wall -Wextra -I.
+ #CFLAGS= -g -Wall -I.
+ OBJS = \
+ chkder.o  enorm.o   hybrd1.o  hybrj.o   lmdif1.o  lmstr1.o  qrfac.o   r1updt.o \

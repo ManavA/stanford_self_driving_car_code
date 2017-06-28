@@ -1,0 +1,22 @@
+<package>
+  <description brief="descriptors_2d">
+
+     Image descriptors library.  This package provides a common interface to many different image descriptors, including, for example, Hog, Surf, superpixel color histogram, Haar wavelets, etc.
+
+  </description>
+  <author>Alex Teichman</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://pr.willowgarage.com/wiki/descriptors</url>
+  <depend package="eigen"/>
+  <depend package="opencv2"/>
+  <depend package="rosconsole"/>
+  <depend package="chamfer_matching"/>
+
+  <export>
+    <cpp cflags="-I${prefix}/include" lflags="-L${prefix}/lib -Wl,-rpath ${prefix}/lib -ldescriptors_2d"/>
+  </export>
+
+</package>
+
+

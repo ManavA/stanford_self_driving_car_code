@@ -1,0 +1,29 @@
+<package>
+  <description brief="paw2">
+
+     paw2
+
+  </description>
+  <author>Stanford Driving</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/paw2</url>
+  <depend package="aw_chsm_planning"/>
+  <depend package="vehiclemodels"/>
+  <depend package="passatmodel"/>
+  <depend package="passat"/>
+  <depend package="display"/>
+  <depend package="velodyne"/>
+  <depend package="imagery"/>
+  <depend package="carlist"/>
+  <depend package="driving_common"/>
+  <depend package="applanix"/>
+  <depend package="localize"/>
+  <depend package="controller"/>
+  <depend package="sound_play"/>
+  <!--depend package="boost_1.46"-->
+  <rosdep name="qwt5_qt4"/>
+
+</package>
+
+

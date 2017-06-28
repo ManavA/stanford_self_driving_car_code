@@ -1,0 +1,6 @@
+<launch>
+    <include file="$(find controller)/launch/controller.launch" />
+    <include file="$(find vehiclesim)/launch/multisim.launch" />
+    <include file="$(find paw2)/launch/paw2.launch" />
+    <include file="$(find estop)/launch/fake_estop.launch" />
+</launch>

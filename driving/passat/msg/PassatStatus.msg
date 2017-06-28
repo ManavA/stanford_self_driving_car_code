@@ -1,0 +1,21 @@
+Header header
+uint8 brake_error
+uint8 prc_warning_lamp
+uint8 can_failure
+float32 actual_brake_pressure1
+float32 actual_brake_pressure2
+float32 requested_brake_pressure
+float32 brake_travel
+uint8 no_brake_200ms
+uint8 brake_initializing
+uint8 no_steering_400ms
+uint8 no_gear_200ms
+float32 motor_temp
+int32 motor_error_code
+int16 rs232_buffer_overruns
+int16 rs232_framing_error
+int16 data_buffer_overrun
+int16 broken_packet
+int16 missed_messages
+float64 timestamp
+

@@ -1,0 +1,20 @@
+<package>
+  <description brief="gls">
+
+     gls
+
+  </description>
+  <author>Stanford Driving</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/gls</url>
+  <depend package="roscpp"/>
+  <depend package="dgcglobal"/>
+  <depend package="driving_common"/>
+  <export>
+    <cpp cflags="-I${prefix}/include" lflags="-L${prefix}/lib -lgls"/>
+  </export>
+
+</package>
+
+

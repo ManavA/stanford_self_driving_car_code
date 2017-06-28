@@ -1,0 +1,19 @@
+<package>
+  <description brief="display">
+
+     data display library
+
+  </description>
+  <author>Stanford Driving</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/display</url>
+  <depend package="imaging"/>
+  <depend package="glsupport"/>
+  <export>
+    <cpp cflags="-I${prefix}/include" lflags="-L${prefix}/lib -ldisplay"/>
+  </export>
+
+</package>
+
+

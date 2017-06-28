@@ -1,0 +1,10 @@
+<launch>
+    <include file="$(find velodyne)/launch/VelodyneParam.launch" />
+    <!--
+    <include file="$(find radar)/launch/Radar1Param.launch" />
+    <include file="$(find radar)/launch/Radar2Param.launch" />
+    <include file="$(find radar)/launch/Radar3Param.launch" />
+    <include file="$(find radar)/launch/Radar4Param.launch" />
+    <include file="$(find radar)/launch/Radar5Param.launch" />
+    -->
+</launch>

@@ -1,0 +1,176 @@
+RNDF_name	shoreline_rndf.txt
+num_segments	6
+num_zones	0
+format_version	1.0
+creation_date	5/15/2007
+segment	1
+num_lanes	2
+lane	1.1
+num_waypoints	3
+lane_width	15
+left_boundary	double_yellow
+checkpoint	1.1.2	1
+exit	1.1.3	2.1.1
+1.1.1	37.427680	-122.076832
+1.1.2	37.427708	-122.077058
+1.1.3	37.427735	-122.077284
+end_lane
+lane	1.2
+num_waypoints	3
+lane_width	15
+left_boundary	double_yellow
+checkpoint	1.2.2	2
+stop	1.2.3
+exit	1.2.3	4.2.1
+exit	1.2.3	5.1.1
+exit	1.2.3	6.1.1
+1.2.1	37.427694	-122.077292
+1.2.2	37.427667	-122.077066
+1.2.3	37.427640	-122.076839
+end_lane
+end_segment
+segment	2
+num_lanes	2
+lane	2.1
+num_waypoints	7
+lane_width	15
+left_boundary	double_yellow
+checkpoint	2.1.4	3
+exit	2.1.7	3.1.1
+2.1.1	37.427646	-122.077436
+2.1.2	37.427458	-122.077471
+2.1.3	37.427271	-122.077506
+2.1.4	37.427084	-122.077542
+2.1.5	37.426897	-122.077577
+2.1.6	37.426710	-122.077612
+2.1.7	37.426523	-122.077648
+end_lane
+lane	2.2
+num_waypoints	7
+lane_width	15
+left_boundary	double_yellow
+checkpoint	2.2.4	4
+exit	2.2.7	1.2.1
+2.2.1	37.426516	-122.077597
+2.2.2	37.426704	-122.077561
+2.2.3	37.426891	-122.077526
+2.2.4	37.427078	-122.077491
+2.2.5	37.427265	-122.077455
+2.2.6	37.427452	-122.077420
+2.2.7	37.427639	-122.077385
+end_lane
+end_segment
+segment	3
+num_lanes	2
+lane	3.1
+num_waypoints	3
+lane_width	15
+left_boundary	double_yellow
+checkpoint	3.1.2	5
+exit	3.1.3	4.1.1
+3.1.1	37.426402	-122.077536
+3.1.2	37.426374	-122.077307
+3.1.3	37.426347	-122.077078
+end_lane
+lane	3.2
+num_waypoints	3
+lane_width	15
+left_boundary	double_yellow
+checkpoint	3.2.2	6
+exit	3.2.3	2.2.1
+3.2.1	37.426387	-122.077070
+3.2.2	37.426415	-122.077299
+3.2.3	37.426442	-122.077528
+end_lane
+end_segment
+segment	4
+num_lanes	2
+lane	4.1
+num_waypoints	7
+lane_width	15
+left_boundary	double_yellow
+checkpoint	4.1.4	7
+stop	4.1.7
+exit	4.1.7	5.1.1
+exit	4.1.7	6.1.1
+exit	4.1.7	1.1.1
+4.1.1	37.426436	-122.076926
+4.1.2	37.426622	-122.076891
+4.1.3	37.426809	-122.076856
+4.1.4	37.426995	-122.076821
+4.1.5	37.427182	-122.076785
+4.1.6	37.427368	-122.076750
+4.1.7	37.427554	-122.076715
+end_lane
+lane	4.2
+num_waypoints	7
+lane_width	15
+left_boundary	double_yellow
+checkpoint	4.2.4	8
+exit	4.2.7	3.2.1
+4.2.1	37.427561	-122.076766
+4.2.2	37.427374	-122.076801
+4.2.3	37.427188	-122.076836
+4.2.4	37.427001	-122.076872
+4.2.5	37.426815	-122.076907
+4.2.6	37.426629	-122.076942
+4.2.7	37.426442	-122.076977
+end_lane
+end_segment
+segment	5
+num_lanes	2
+lane	5.1
+num_waypoints	4
+lane_width	15
+left_boundary	double_yellow
+checkpoint	5.1.2	9
+exit	5.1.3	5.2.2
+5.1.1	37.427613	-122.076616
+5.1.2	37.427595	-122.076467
+5.1.3	37.427577	-122.076318
+5.1.4	37.427559	-122.076169
+end_lane
+lane	5.2
+num_waypoints	4
+lane_width	15
+left_boundary	double_yellow
+checkpoint	5.2.3	10
+stop	5.2.4
+exit	5.2.4	6.1.1
+exit	5.2.4	1.1.1
+exit	5.2.4	4.2.1
+5.2.1	37.427600	-122.076161
+5.2.2	37.427618	-122.076310
+5.2.3	37.427636	-122.076459
+5.2.4	37.427654	-122.076608
+end_lane
+end_segment
+segment	6
+num_lanes	2
+lane	6.1
+num_waypoints	4
+lane_width	15
+left_boundary	double_yellow
+checkpoint	6.1.2	11
+exit	6.1.3	6.2.2
+6.1.1	37.427733	-122.076681
+6.1.2	37.427852	-122.076659
+6.1.3	37.427970	-122.076636
+6.1.4	37.428089	-122.076614
+end_lane
+lane	6.2
+num_waypoints	4
+lane_width	15
+left_boundary	double_yellow
+checkpoint	6.2.3	12
+stop	6.2.4
+exit	6.2.4	1.1.1
+exit	6.2.4	4.2.1
+exit	6.2.4	5.1.1
+6.2.1	37.428095	-122.076665
+6.2.2	37.427977	-122.076688
+6.2.3	37.427858	-122.076710
+6.2.4	37.427739	-122.076732
+end_lane
+end_segment
+end_file

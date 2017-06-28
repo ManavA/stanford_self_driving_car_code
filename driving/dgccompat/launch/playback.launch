@@ -1,0 +1,6 @@
+<launch>
+  <include file="$(find velodyne)/launch/VelodyneParam.launch" />
+  <arg name="args" />
+  <node name="dgcplayback" pkg="dgccompat" type="dgcplayback" args="$(arg args)" output="screen">
+  </node>
+</launch>

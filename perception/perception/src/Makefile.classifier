@@ -1,0 +1,98 @@
+CAR_NAMES := 	dish_area01-11-17-2009_20-08-30 \
+		dish_area02-11-17-2009_20-13-49 \
+		page_mill_and_hansen01-11-17-2009_19-49-18 \
+		page_mill_and_hansen02-11-17-2009_19-56-57 \
+		el_camino01-11-17-2009_19-17-25 \
+		el_camino02-11-17-2009_19-21-11
+
+NEGATIVES_NAMES := 	null01-11-16-2009_20-18-44 \
+			null02-11-16-2009_20-22-34 \
+			null09-11-16-2009_20-33-22 \
+			null11-11-16-2009_20-48-17 \
+			null13-11-16-2009_21-03-32 \
+			null15-11-16-2009_21-05-30 \
+			null18-11-16-2009_21-10-09 \
+			null21-11-16-2009_21-14-31
+
+BP_NAMES := 	white_plaza02-11-17-2009_17-35-42 \
+		white_plaza04-11-17-2009_17-49-04 \
+		white_plaza05-11-17-2009_17-59-14 \
+		white_plaza06-11-17-2009_18-13-19 \
+		lasuen01-11-17-2009_16-56-39 \
+		lasuen02-11-17-2009_17-07-43 \
+		lasuen03-11-17-2009_17-15-00 \
+		lasuen04-11-17-2009_17-18-05 \
+		lasuen05-11-17-2009_17-20-16 \
+		lasuen06-11-17-2009_17-26-37
+
+TESTSET_NAMES := 	CampusLoop3-10-03-2009_15-32-38 \
+		 	driving_campus_loop-11-17-2009_20-22-00 \
+			driving_test_set-11-17-2009_19-13-35 \
+			friday-10-23-2009_18-23-12 \
+			lomita_and_santa_teresa01-11-17-2009_18-35-12 \
+			oval01-11-17-2009_18-52-00 \
+			serra_and_galvez-11-17-2009_19-06-10
+
+
+TRACK_DIR := /home/teichman/push/rss_tracks/tracks
+TESTSET_PATHS := $(addsuffix .tm, $(addprefix $(TRACK_DIR)/, $(TESTSET_NAMES)))
+STANDARD_TRAINING := NUM_THREADS=8 NCANDIDATES=12 MAX_WCS=1000 rosrun multibooster multitool --train
+INITIAL_MBD_PATHS := 	$(addsuffix .mbd, $(addprefix datasets/negatives/, $(NEGATIVES_NAMES))) \
+			$(addsuffix .mbd, $(addprefix datasets/objects/, $(CAR_NAMES))) \
+			$(addsuffix .mbd, $(addprefix datasets/objects/, $(BP_NAMES)))
+TRACK_DATASET_EXTRACTOR := $(RACE_ROOT)/src/program/perception/track_dataset_extractor
+BACKGROUND_EXTRACTOR := $(RACE_ROOT)/src/program/perception/background_extractor
+TRACK_CLASSIFIER := $(RACE_ROOT)/src/program/perception/track_classifier
+
+output.txt: classifiers/20percent_classifier.mb
+	$(TRACK_CLASSIFIER) $< $(TESTSET_PATHS) > raw.txt
+	cat raw.txt | grep -A9999 "Total test examples" > $@
+
+classifiers/20percent_classifier.mb: datasets/joined/20percent.mbd
+	mkdir -p $(dir $@)
+	$(STANDARD_TRAINING) $< $@
+
+classifiers/full_classifier.mb: datasets/joined/full.mbd
+	mkdir -p $(dir $@)
+	$(STANDARD_TRAINING) $< $@
+
+datasets/joined/full.mbd: $(INITIAL_MBD_PATHS)
+	mkdir -p $(dir $@)
+	rosrun multibooster multitool --join $^ $@
+
+datasets/joined/20percent.mbd: $(INITIAL_MBD_PATHS)
+	mkdir -p $(dir $@)
+	mkdir -p $(dir $@)/temp-decimated
+	-rm $(dir $@)/temp-decimated/*
+	@for file in $^; do \
+	echo rosrun multibooster multitool --decimateDataset 0.2 $$file $(dir $@)/temp-decimated/`basename $$file`; \
+	rosrun multibooster multitool --decimateDataset 0.2 $$file $(dir $@)/temp-decimated/`basename $$file`; \
+	done
+	rosrun multibooster multitool --join $(dir $@)/temp-decimated/* $@
+	rm -rf $(dir $@)/temp-decimated/
+
+datasets/objects/%.mbd:
+	mkdir -p $(dir $@)
+	$(TRACK_DATASET_EXTRACTOR) $(TRACK_DIR)/$(notdir $(basename $@)).tm $@
+
+new_features:
+	rm -rf classifiers
+	rm -rf datasets
+
+
+
+datasets/negatives/%.mbd:
+	mkdir -p $(dir $@)
+	DISABLE_RNDF_FILTER= MBD_SAVENAME=$@ START_FRAME=0 $(BACKGROUND_EXTRACTOR) 2009-11-16_negatives/$(notdir $*).vlf > /dev/null
+
+datasets/negatives/null21-11-16-2009_21-14-31.mbd:
+	mkdir -p $(dir $@)
+	DISABLE_RNDF_FILTER= MBD_SAVENAME=$@ END_FRAME=700 $(BACKGROUND_EXTRACTOR) 2009-11-16_negatives/$(notdir $(basename $@)).vlf > /dev/null
+
+datasets/negatives/null01-11-16-2009_20-18-44.mbd:
+	mkdir -p $(dir $@)
+	DISABLE_RNDF_FILTER= MBD_SAVENAME=$@ END_FRAME=1600 $(BACKGROUND_EXTRACTOR) 2009-11-16_negatives/$(notdir $(basename $@)).vlf > /dev/null
+
+datasets/negatives/null11-11-16-2009_20-48-17.mbd:
+	mkdir -p $(dir $@)
+	DISABLE_RNDF_FILTER= MBD_SAVENAME=$@ END_FRAME=900 $(BACKGROUND_EXTRACTOR) 2009-11-16_negatives/$(notdir $(basename $@)).vlf > /dev/null

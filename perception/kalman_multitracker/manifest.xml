@@ -1,0 +1,15 @@
+<package>
+  <description brief="kalman_multitracker">
+
+     kalman_multitracker
+
+  </description>
+  <author>Stanford Driving</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/kalman_multitracker</url>
+  <depend package="linear_kalman_filter"/>
+
+</package>
+
+

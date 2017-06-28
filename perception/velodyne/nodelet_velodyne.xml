@@ -1,0 +1,17 @@
+<library path="lib/libvelodyne_nodelets">
+  <class name="velodyne/Driver" type="velodyne::Driver" base_class_type="nodelet::Nodelet">
+    <description>
+      Hardware driver to read data from the Velodyne and publish it
+    </description>
+  </class>
+  <class name="velodyne/Project3D" type="velodyne::Project3D" base_class_type="nodelet::Nodelet">
+    <description>
+      Projects raw velodyne Packet data into 3D coordinates, as well as applying calibration corrections
+    </description>
+  </class>
+  <class name="velodyne/Points" type="velodyne::Points" base_class_type="nodelet::Nodelet">
+    <description>
+      Collects projected velodyne data and creates a PointCloud of each spin with it
+    </description>
+  </class>
+</library>

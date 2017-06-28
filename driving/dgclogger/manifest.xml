@@ -1,0 +1,19 @@
+<package>
+  <description brief="dgclogger">
+
+     dgclogger
+
+  </description>
+  <author>Stanford Driving</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/dgclogger</url>
+  <depend package="roscpp"/>
+  <depend package="dgcglobal"/>
+  <export>
+    <cpp cflags="-I${prefix}/include" lflags="-L${prefix}/lib -llogio "/>
+  </export>
+
+</package>
+
+

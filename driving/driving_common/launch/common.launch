@@ -1,0 +1,5 @@
+<launch>
+  <param name="/driving/rndf_file" value="$(find driving_common)/param/rndfs/VAIL_large_loop_rndf.txt" />
+  <param name="/driving/mdf_file" value="$(find driving_common)/param/mdfs/VAIL_internal_mdf.txt" />
+  <param name="/driving/imagery_root" value="/driving/imagery" />
+</launch>

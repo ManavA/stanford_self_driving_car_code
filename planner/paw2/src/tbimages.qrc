@@ -1,0 +1,12 @@
+<RCC>
+    <qresource prefix="/tbimages" >
+        <file>tbimages/open.png</file>
+        <file>tbimages/n_start.png</file>
+        <file>tbimages/n_rwd.png</file>
+        <file>tbimages/n_play.png</file>
+        <file>tbimages/n_pause.png</file>
+        <file>tbimages/n_stop.png</file>
+        <file>tbimages/n_ffwd.png</file>
+        <file>tbimages/n_exit.png</file>
+    </qresource>
+</RCC>

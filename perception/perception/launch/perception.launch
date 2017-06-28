@@ -1,0 +1,6 @@
+<launch>
+  <include file="$(find perception)/launch/PerceptionParam.launch" />
+  <include file="$(find driving_common)/launch/common.launch" />
+  <node name="perception" pkg="perception" type="perception" output="screen">
+  </node>
+</launch>

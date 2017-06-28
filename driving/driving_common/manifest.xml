@@ -1,0 +1,17 @@
+<package>
+  <description brief="driving_common">
+
+     driving_common
+
+  </description>
+  <author>Stanford Driving</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/driving_common</url>
+  <export>
+    <cpp cflags="-I${prefix}/include" lflags="-L${prefix}/lib -ldriving_common"/>
+  </export>
+
+</package>
+
+

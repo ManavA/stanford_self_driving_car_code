@@ -1,0 +1,161 @@
+--- ./test/ann_test.cpp.orig	2009-01-06 10:58:37.000000000 -0800
++++ ./test/ann_test.cpp	2009-01-06 10:59:11.000000000 -0800
+@@ -37,6 +37,7 @@
+ #include <ctime>						// clock
+ #include <cmath>						// math routines
+ #include <string>						// C string ops
++#include <string.h>
+ #include <fstream>						// file I/O
+ 
+ #include <ANN/ANN.h>					// ANN declarations
+@@ -370,7 +371,7 @@
+ //----------------------------------------------------------------------
+ 
+ void Error(								// error routine
+-	char				*msg,			// error message
++	const char			*msg,			// error message
+ 	ANNerr				level)			// abort afterwards
+ {
+ 	if (level == ANNabort) {
+--- ./Makefile.orig	2009-01-06 11:03:59.000000000 -0800
++++ ./Makefile	2009-01-06 11:04:29.000000000 -0800
+@@ -42,6 +42,7 @@
+ default:
+ 	@echo "Enter one of the following:"
+ 	@echo "  make linux-g++            for Linux and g++"
++	@echo "  make linux-shared-g++     for Linux and g++ (shared)"
+ 	@echo "  make macosx-g++           for Mac OS X and g++"
+ 	@echo "  make sunos5               for Sun with SunOS 5.x"
+ 	@echo "  make sunos5-sl            for Sun with SunOS 5.x, make shared libs"
+@@ -56,7 +57,7 @@
+ #-----------------------------------------------------------------------------
+ # main make entry point
+ #-----------------------------------------------------------------------------
+-alpha-g++ macosx-g++ linux-g++ sgi sunos4 sunos4-g++ sunos5 sunos5-g++ sunos5-g++-sl authors-debug authors-perf:
++alpha-g++ macosx-g++ linux-g++ linux-shared-g++ sgi sunos4 sunos4-g++ sunos5 sunos5-g++ sunos5-g++-sl authors-debug authors-perf:
+ 	cd src ; $(MAKE) $@
+ 	cd test ; $(MAKE) $@
+ 	cd sample ; $(MAKE) $@
+--- ./src/kd_dump.cpp.orig	2009-01-06 10:56:58.000000000 -0800
++++ ./src/kd_dump.cpp	2009-01-06 10:57:29.000000000 -0800
+@@ -31,6 +31,8 @@
+ // desired.)
+ //----------------------------------------------------------------------
+ 
++#include <stdlib.h>
++#include <string.h>
+ #include "kd_tree.h"					// kd-tree declarations
+ #include "bd_tree.h"					// bd-tree declarations
+ 
+--- ./src/perf.cpp.orig	2009-01-06 10:57:54.000000000 -0800
++++ ./src/perf.cpp	2009-01-06 10:57:59.000000000 -0800
+@@ -102,7 +102,7 @@
+ }
+ 
+ 										// print a single statistic
+-void print_one_stat(char *title, ANNsampStat s, double div)
++void print_one_stat(const char *title, ANNsampStat s, double div)
+ {
+ 	cout << title << "= [ ";
+ 	cout.width(9); cout << s.mean()/div			<< " : ";
+--- ./src/ANN.cpp.orig	2009-01-06 10:55:10.000000000 -0800
++++ ./src/ANN.cpp	2009-01-06 11:00:32.000000000 -0800
+@@ -24,6 +24,7 @@
+ //		Added performance counting to annDist()
+ //----------------------------------------------------------------------
+ 
++#include <stdlib.h>
+ #include <ANN/ANNx.h>					// all ANN includes
+ #include <ANN/ANNperf.h>				// ANN performance 
+ 
+@@ -163,7 +164,7 @@
+ //	Error handler
+ //----------------------------------------------------------------------
+ 
+-void annError(char *msg, ANNerr level)
++void annError(const char *msg, ANNerr level)
+ {
+ 	if (level == ANNabort) {
+ 		cerr << "ANN: ERROR------->" << msg << "<-------------ERROR\n";
+--- ./ann2fig/ann2fig.cpp.orig	2009-01-06 11:01:08.000000000 -0800
++++ ./ann2fig/ann2fig.cpp	2009-01-06 11:01:35.000000000 -0800
+@@ -40,6 +40,8 @@
+ //	arguments.
+ //----------------------------------------------------------------------
+ 
++#include <stdlib.h>
++#include <string.h>
+ #include <cstdio>						// C standard I/O
+ #include <fstream>						// file I/O
+ #include <string>						// string manipulation
+@@ -92,7 +94,7 @@
+ //	Error handler
+ //----------------------------------------------------------------------
+ 
+-void Error(char *msg, ANNerr level)
++void Error(const char *msg, ANNerr level)
+ {
+ 	if (level == ANNabort) {
+ 		cerr << "ann2fig: ERROR------->" << msg << "<-------------ERROR\n";
+--- ./include/ANN/ANNx.h.orig	2009-01-06 10:56:33.000000000 -0800
++++ ./include/ANN/ANNx.h	2009-01-06 10:56:40.000000000 -0800
+@@ -61,7 +61,7 @@
+ //----------------------------------------------------------------------
+ 
+ void annError(					// ANN error routine
+-	char			*msg,		// error message
++	const char		*msg,		// error message
+ 	ANNerr			level);		// level of error
+ 
+ void annPrintPt(				// print a point
+--- ./Make-config.orig	2009-01-06 11:02:38.000000000 -0800
++++ ./Make-config	2009-01-06 11:04:36.000000000 -0800
+@@ -76,6 +76,15 @@
+ 	"MAKELIB = ar ruv" \
+ 	"RANLIB = true"
+ 
++#					Linux using g++ shared
++linux-shared-g++:
++	$(MAKE) targets \
++	"ANNLIB = libANN.so" \
++	"C++ = g++" \
++	"CFLAGS = -O3" \
++	"MAKELIB = g++ -shared -o" \
++	"RANLIB = true"
++
+ #					Mac OS X using g++
+ macosx-g++:
+ 	$(MAKE) targets \
+--- include/ANN/ANN.h.orig	2009-01-06 11:37:22.000000000 -0800
++++ include/ANN/ANN.h	2009-01-06 11:38:19.000000000 -0800
+@@ -151,7 +151,7 @@
+ //		not occur in distance calculation.
+ //----------------------------------------------------------------------
+ 
+-typedef double	ANNcoord;				// coordinate data type
++typedef float	ANNcoord;				// coordinate data type
+ typedef double	ANNdist;				// distance data type
+ 
+ //----------------------------------------------------------------------
+--- test/rand.cpp.orig	2009-01-06 11:42:47.000000000 -0800
++++ test/rand.cpp	2009-01-06 11:45:15.000000000 -0800
+@@ -392,7 +392,7 @@
+ 	ANNpointArray		pa,				// point array
+ 	int					n,				// number of points
+ 	int					dim,			// dimension
+-	double				*control,		// control vector
++	ANNcoord				*control,		// control vector
+ 	double				std_dev)		// standard deviation
+ {
+ 	for (int i = 0; i < n; i++) {				// generate each point
+@@ -490,8 +490,8 @@
+ 	ANNpointArray		pa,				// point array
+ 	int					n,				// number of points
+ 	int					dim,			// dimension
+-	double				*center,		// center vector
+-	double				*std_dev)		// standard deviation vector
++	ANNcoord				*center,		// center vector
++	ANNcoord				*std_dev)		// standard deviation vector
+ {
+ 	for (int i = 0; i < n; i++) {
+ 		for (int d = 0; d < dim; d++) {

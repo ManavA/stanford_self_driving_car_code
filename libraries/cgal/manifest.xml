@@ -1,0 +1,17 @@
+<package>
+  <description brief="cgal">
+
+     cgal
+
+  </description>
+  <author>Stanford Driving</author>
+  <license>BSD,QPL</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/cgal</url>
+  <export>
+    <cpp cflags="-I${prefix}/include -frounding-math" lflags="-L${prefix}/lib -Wl,-rpath,${prefix}/lib -lCGAL"/>
+  </export>
+
+</package>
+
+

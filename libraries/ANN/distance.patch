@@ -1,0 +1,11 @@
+--- include/ANN/ANN.h.orig	2009-03-28 00:51:04.000000000 +0100
++++ include/ANN/ANN.h	2009-03-28 00:51:24.000000000 +0100
+@@ -152,7 +152,7 @@
+ //----------------------------------------------------------------------
+ 
+ typedef float	ANNcoord;				// coordinate data type
+-typedef double	ANNdist;				// distance data type
++typedef float   ANNdist;				// distance data type
+ 
+ //----------------------------------------------------------------------
+ //	ANNidx

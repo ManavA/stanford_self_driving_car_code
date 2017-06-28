@@ -1,0 +1,6 @@
+<launch>
+  <node pkg="point_cloud_mapping" type="organized_normal_estimation_node" name="organized_normal_estimation" output="screen" respawn="true">
+    <param name="downsample_factor" value="1" />
+    <remap from="organized_pcd" to="cloud_sr" />
+  </node>
+</launch>

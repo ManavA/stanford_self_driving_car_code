@@ -1,0 +1,7 @@
+<launch>
+  <include file="$(find perception)/launch/PerceptionParam.launch" />
+  <include file="$(find driving_common)/launch/common.launch" />
+  <include file="$(find paw2)/launch/Paw2Param.launch" />
+  <node name="paw2" pkg="paw2" type="paw2" args="nowaitforcar">
+  </node>
+</launch>

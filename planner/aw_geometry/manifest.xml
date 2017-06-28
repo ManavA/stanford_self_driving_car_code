@@ -1,0 +1,19 @@
+<package>
+  <description brief="aw_geometry">
+
+     aw_geometry
+
+  </description>
+  <author>Stanford Driving</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/aw_geometry</url>
+  <depend package="cgal"/>
+  <depend package="eigen"/>
+  <export>
+    <cpp cflags="-I${prefix}/include" lflags="-L${prefix}/lib -law_geometry"/>
+  </export>
+
+</package>
+
+

@@ -1,0 +1,22 @@
+<package>
+  <description brief="utils">
+
+    Collection of driving related utility programs.
+
+  </description>
+  <author>Stanford Driving</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/utils</url>
+  <rosdep name="zlib"/>
+  <depend package="roscpp"/>
+  <depend package="dgcglobal"/>
+  <depend package="imagery"/>
+  <depend package="lltransform"/>
+  <export>
+    <cpp cflags="-I${prefix}/include"/>
+  </export>
+
+</package>
+
+

@@ -1,0 +1,13 @@
+<launch>
+  <param name="/driving/applanix/ip_address" 		    value="192.168.1.8" />
+  <param name="/driving/applanix/remote_port" 		    value="5602" />
+  <param name="/driving/applanix/logging_port" 		    value="5603" />
+  <param name="/driving/applanix/publish_dmi" 		    value="false" />
+  <param name="/driving/applanix/network_panic_in_seconds"  value="0.2" />
+  <param name="/driving/applanix/pose_panic_in_seconds"     value="0.2" />
+  <param name="/driving/applanix/rms_panic_in_seconds"      value="3" />
+  <param name="/driving/applanix/gps_panic_in_seconds"      value="3" />
+  <param name="/driving/applanix/time_panic_in_seconds"     value="3" />
+  <param name="/driving/applanix/gams_panic_in_seconds"     value="10" />
+  <param name="/driving/applanix/dmi_panic_in_seconds"      value="0.2" />
+</launch>

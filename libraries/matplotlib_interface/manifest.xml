@@ -1,0 +1,20 @@
+<package>
+  <description brief="matplotlib_interface">
+
+     matplotlib_interface
+
+  </description>
+  <author>Stanford Driving</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>aoeu</url>
+  <depend package="eigen"/>
+
+  <export>
+    <cpp cflags="-I${prefix}/include" lflags="-Wl,-rpath,${prefix}/lib -L${prefix}/lib -lmatplotlib_interface" />
+  </export>
+
+  
+</package>
+
+

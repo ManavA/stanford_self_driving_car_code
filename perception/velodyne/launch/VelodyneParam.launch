@@ -1,0 +1,7 @@
+<launch>
+  <param name="/driving/velodyne/port" 			    value="2368" />
+  <param name="/driving/velodyne/cal_file" 	    value="$(find driving_common)/param/cal/ID89.cal" />
+  <param name="/driving/velodyne/calibrate_intensities"     value="true" />
+  <param name="/driving/velodyne/int_file" value="$(find driving_common)/param/cal/ID89.ical" />
+  <node pkg="tf" type="static_transform_publisher" name="velodyne_tf_broadcaster" args="1.62 0.0 0.40 3.14 0 0 Applanix Velodyne 100" />
+</launch>

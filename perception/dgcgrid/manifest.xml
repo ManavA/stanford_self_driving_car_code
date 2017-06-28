@@ -1,0 +1,18 @@
+<package>
+  <description brief="dgcgrid">
+
+     dgcgrid
+
+  </description>
+  <author>Stanford Driving</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/dgcgrid</url>
+  <depend package="dgcglobal"/>
+  <export>
+    <cpp cflags="-I${prefix}/include" lflags="-L${prefix}/lib -lgrid"/>
+  </export>
+
+</package>
+
+

@@ -1,0 +1,22 @@
+<package>
+  <description brief="aw_rndf">
+
+     aw_rndf
+
+  </description>
+  <author>Stanford Driving</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/aw_rndf</url>
+  <depend package="aw_geometry"/>
+  <depend package="eigen" />
+  <depend package="dgcglobal"/>
+  <depend package="lltransform"/>
+  <depend package="glsupport"/>
+  <export>
+    <cpp cflags="-I${prefix}/include" lflags="-L${prefix}/lib -law_rndf"/>
+  </export>
+
+</package>
+
+

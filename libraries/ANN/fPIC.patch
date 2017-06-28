@@ -1,0 +1,20 @@
+--- Make-config	2009-02-05 15:12:09.000000000 -0800
++++ Make-config.new	2009-02-05 15:22:58.000000000 -0800
+@@ -72,7 +72,7 @@
+ 	$(MAKE) targets \
+ 	"ANNLIB = libANN.a" \
+ 	"C++ = g++" \
+-	"CFLAGS = -O3" \
++	"CFLAGS = -O3 -fPIC" \
+ 	"MAKELIB = ar ruv" \
+ 	"RANLIB = true"
+ 
+@@ -81,7 +81,7 @@
+ 	$(MAKE) targets \
+ 	"ANNLIB = libANN.so" \
+ 	"C++ = g++" \
+-	"CFLAGS = -O3" \
++	"CFLAGS = -O3 -fPIC" \
+ 	"MAKELIB = g++ -shared -o" \
+ 	"RANLIB = true"
+ 

@@ -1,0 +1,17 @@
+MDF_name	shoreline_circle_mdf.txt
+RNDF	shoreline_circle_rndf.txt
+format_version	1.0
+creation_date	11/09/2006
+checkpoints	
+num_checkpoints	5
+1
+1
+1
+1
+1
+end_checkpoints
+speed_limits
+num_speed_limits	1
+1	0	30
+end_speed_limits
+end_file

@@ -1,0 +1,15 @@
+int32        id
+uint8        type
+uint8        type_this_frame
+int32        classified_this_frame
+float32      confidence
+float64      x
+float64      y
+float32      direction
+float32      width
+float32      length
+float32      velocity
+float32      x_var
+float32      y_var
+float32      xy_cov
+int8         turn_signal

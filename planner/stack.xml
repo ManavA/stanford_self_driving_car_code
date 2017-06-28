@@ -1,0 +1,12 @@
+<stack>
+  <description brief="planner">planner</description>
+  <author>Stanford Driving</author>
+  <license>BSD</license>  
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/planner</url>
+  <depend stack="ros" />
+  <depend stack="libraries" />
+  <depend stack="driving" />
+  <depend stack="perception" />
+
+</stack>

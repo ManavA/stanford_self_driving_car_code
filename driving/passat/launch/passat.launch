@@ -1,0 +1,6 @@
+<launch>
+  <include file="$(find passat)/launch/VehicleParams.launch" />
+  <node name="passat" pkg="passat" type="passat" output="screen">
+  <!--node name="can" pkg="passat" type="can" output="screen"-->
+  </node>
+</launch>

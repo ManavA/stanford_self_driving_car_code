@@ -1,0 +1,24 @@
+<package>
+  <description brief="localize">
+
+     localize
+
+  </description>
+  <author>Stanford Driving</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/localize</url>
+  <depend package="applanix"/>
+  <depend package="lltransform"/>
+  <depend package="dgcglobal"/>
+  <depend package="dgcgrid"/>
+  <depend package="gls"/>
+  <depend package="velodyne"/>
+  <depend package="opencv2"/>
+  <export>
+    <cpp cflags="-I${prefix}/include" lflags="-L${prefix}/lib -llocalize_terrainmap"/>
+  </export>
+
+</package>
+
+

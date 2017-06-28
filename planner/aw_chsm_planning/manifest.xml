@@ -1,0 +1,26 @@
+<package>
+  <description brief="aw_chsm_planning">
+
+     aw_chsm_planning
+
+  </description>
+  <author>Stanford Driving</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/aw_chsm_planning</url>
+  <!-- depend package="boost_1.46"-->
+  <depend package="eigen"/>
+  <depend package="dgcglobal"/>
+  <depend package="aw_rndf"/>
+  <depend package="aw_topology"/>
+  <depend package="curvesmoothing"/>
+  <depend package="driving_common"/>
+  <depend package="applanix"/>
+  <depend package="perception"/>
+  <export>
+    <cpp cflags="-I${prefix}/include" lflags="-L${prefix}/lib -law_chsm_planning"/>
+  </export>
+
+</package>
+
+

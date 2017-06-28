@@ -1,0 +1,18 @@
+<package>
+  <description brief="asyncwriter">
+
+     asyncwriter
+
+  </description>
+  <author>Stanford Driving</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/async_writer</url>
+  <depend package="dgcglobal"/>
+  <export>
+    <cpp cflags="-I${prefix}/include" lflags="-L${prefix}/lib -lasync_writer"/>
+  </export>
+
+</package>
+
+

@@ -1,0 +1,8 @@
+<launch>
+  <node pkg="nodelet" type="nodelet" name="standalone_nodelet" args="manager"/>
+  <node pkg="nodelet" type="nodelet" name="Points" args="load velodyne/Points standalone_nodelet" output="screen"/>
+  <include file="$(find dgccompat)/launch/playback.launch" args="$(arg args)">
+  <arg name="args" value="/home/pnk2si/data/seq/good_run_with_traffic_late_stop-09-01-2010_15-55-43.log.gz"/>
+  </include>
+  <node name="rviz" pkg="rviz" type="rviz" args="-d $(find velodyne)/launch/velodyne_view.vcg"/>
+</launch>

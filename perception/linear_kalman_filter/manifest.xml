@@ -1,0 +1,20 @@
+<package>
+  <description brief="linear_kalman_filter">
+
+     linear_kalman_filter
+
+  </description>
+  <author>Stanford Driving</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/linear_kalman_filter</url>
+  <depend package="eigen"/>
+  <depend package="matplotlib_interface"/>
+
+  <export>
+    <cpp cflags="-I${prefix}/include" lflags="-L${prefix}/lib -Wl,-rpath ${prefix}/lib -llinear_kalman_filter"/>
+  </export>
+  
+</package>
+
+

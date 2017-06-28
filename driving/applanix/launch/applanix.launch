@@ -1,0 +1,5 @@
+<launch>
+  <include file="$(find applanix)/launch/ApplanixParam.launch" />
+  <node name="applanix" pkg="applanix" type="applanix">
+  </node>
+</launch>

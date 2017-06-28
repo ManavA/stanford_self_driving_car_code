@@ -1,0 +1,13 @@
+Header header
+int32 id
+int32 measurement_number
+RadarTarget[] target
+int8 sensor_dirty
+int8 hw_failure
+int8 sgu_failure
+int8 sgu_comsurveillance
+int8 cu_io1_received
+int8 cu_io2_received
+int8 cu_request_received
+int32 scu_temperature
+float64 timestamp

@@ -1,0 +1,6 @@
+<launch>
+  <include file="$(find driving_common)/launch/common.launch"/>
+  <include file="$(find driving_common)/launch/sensor_params.launch"/>
+  <node name="localize" pkg="localize" type="localize_velodyne" output="screen" >
+  </node>
+</launch>

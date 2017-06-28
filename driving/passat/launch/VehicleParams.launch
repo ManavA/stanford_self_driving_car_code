@@ -1,0 +1,19 @@
+<launch>
+  <param name="/driving/vehicle/device" value="/dev/ttyUSB0" />
+  <param name="/driving/vehicle/steering_control" value="true" />
+  <param name="/driving/vehicle/brake_control" value="true" />
+  <param name="/driving/vehicle/throttle_control" value="true" />
+  <param name="/driving/vehicle/max_throttle" value="0.5" />
+  <param name="/driving/vehicle/max_brake" value="100.0" />
+  <param name="/driving/vehicle/max_steering" value="450.0" />
+  <!-- param name="/driving/vehicle/max_torque" value="0.35" -->
+  <param name="/driving/vehicle/max_torque" value="3.0" />
+  <param name="/driving/vehicle/enable_fsm" value="false" />
+  <param name="/driving/vehicle/estop_brake" value="50.0" />
+  <param name="/driving/vehicle/idle_brake" value="30.0" />
+  <param name="/driving/vehicle/idle_throttle" value="0.0" />
+  <param name="/driving/vehicle/torque_control" value="true" />
+  <param name="/driving/vehicle/steering_auto" value="true" />
+  <param name="/driving/vehicle/belt_steering" value="false" />
+  <param name="/driving/vehicle/can_device" value="/dev/ttyUSB0" />
+</launch>

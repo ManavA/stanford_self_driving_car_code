@@ -1,0 +1,22 @@
+<package>
+  <description brief="glsupport">
+
+     glsupport
+
+  </description>
+  <author>Stanford Driving</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/glsupport</url>
+  <depend package="dgcglobal"/>
+  <depend package="gls"/>
+  <depend package="opencv2"/>
+  <depend package="polytraj"/>
+  <rosdep name="ftgl"/>
+  <export>
+    <cpp cflags="-I${prefix}/include" lflags="-L${prefix}/lib -lgl_support -lglut -ltextures"/>
+  </export>
+
+</package>
+
+

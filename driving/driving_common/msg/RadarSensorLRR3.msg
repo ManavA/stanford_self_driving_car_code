@@ -1,0 +1,32 @@
+Header header
+int32 measurement_number
+RadarTargetLRR3[] target
+float32 vehicle_yaw_rate
+float32 vehicle_velocity
+float32 vehicle_acceleration
+float32 vehicle_slip_angle
+float32 curvature
+
+int8 acc_target_id
+int8 acc_stationary_id
+float32 acc_distance
+float32 acc_course_offset
+float32 acc_relative_acceleration
+float32 acc_relative_velocity
+
+int8 pss_moving_id
+int8 pss_stationary_id
+float32 pss_moving_distance
+float32 pss_moving_lateral_offset
+float32 pss_stationary_distance
+float32 pss_stationary_lateral_offset
+int8 sensor_dirty
+int8 hw_failure
+int8 sgu_failure
+int32 scu_temperature
+float32 horz_missalign_angle
+
+int8 cu_request
+int8 cu_handle
+
+float64 timestamp

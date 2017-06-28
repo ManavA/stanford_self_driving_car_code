@@ -1,0 +1,49 @@
+<launch>
+  <param name="/driving/perception/hz" value="10.0" />
+  <param name="/driving/perception/clear_sensor_data" value="false" />
+  <param name="/driving/perception/max_sensor_delay" value="10.4" />
+  <param name="/driving/perception/overpass_height" value="1.5" />
+  <param name="/driving/perception/map_size_x" value="100.0" />
+  <param name="/driving/perception/map_size_y" value="100.0" />
+  <param name="/driving/perception/map_resolution" value="0.201" />
+  <param name="/driving/perception/z_resolution" value="1.0" />
+  <param name="/driving/perception/z_obstacle_height" value="0.2" />
+  <param name="/driving/perception/gls_output" value="true" />
+  <param name="/driving/perception/num_threads" value="1" />
+  <param name="/driving/perception/velodyne_min_beam_diff" value="0.50" />
+  <param name="/driving/perception/velodyne_threshold_factor" value="0.0013" />
+  <param name="/driving/perception/map_cell_threshold" value="0.3" />
+  <param name="/driving/perception/map_cell_min_hits" value="2" />
+  <param name="/driving/perception/map_cell_increase" value="5" />
+  <param name="/driving/perception/map_ray_tracing" value="true" />
+  <param name="/driving/perception/show_ray_tracing" value="true" />
+  <param name="/driving/perception/extract_dynamic" value="true" />
+  <param name="/driving/perception/show_virtual_scan" value="false" />
+  <param name="/driving/perception/virtual_scan_resolution" value="2.5" />
+  <param name="/driving/perception/use_point_cloud" value="true" />
+  <param name="/driving/perception/use_velodyne" value="true" />
+  <param name="/driving/perception/velodyne_max_range" value="80.0" />
+  <param name="/driving/perception/publish_map_rle" value="false" />
+  <param name="/driving/perception/publish_map_diff" value="true" />
+  <param name="/driving/perception/publish_map_diff" value="true" />
+
+  <param name="/driving/perception/segmentation/min_points" value="5" />
+  <param name="/driving/perception/segmentation/max_points" value="500" />
+  <param name="/driving/perception/segmentation/kernel_size" value="4" />
+  <param name="/driving/perception/segmentation/gls_output" value="true" />
+  <param name="/driving/perception/segmentation/min_height" value="0.3" />
+
+  <param name="/driving/perception/tracker/filter_rndf" value="false" />
+  <param name="/driving/perception/tracker/filter_rndf_max_distance" value="5.0" />
+  <param name="/driving/perception/tracker/filter_rndf_max_pedestrian_distance" value="50.0" />
+  <param name="/driving/perception/tracker/merge_distance" value="5.0" />
+  <param name="/driving/perception/tracker/lateral_merge_dist" value="0.75" />
+  <param name="/driving/perception/tracker/pedestrian_classifier" value="$(find perception)/param/classifiers/2010-05-03_hogspin_12cand_renamed.mb" />
+  <param name="/driving/perception/tracker/correspondence_threshold" value="0.00000001" />
+  <param name="/driving/perception/tracker/pruning_threshold" value="0.3" />
+  <param name="/driving/perception/tracker/measurement_variance" value="0.1" />
+  <param name="/driving/perception/tracker/position_variance" value="0.1" />
+  <param name="/driving/perception/tracker/velocity_variance" value="0.0001" />
+  <param name="/driving/perception/tracker/initial_position_variance" value="0.05" />
+  <param name="/driving/perception/tracker/initial_velocity_variance" value="1." />
+</launch>

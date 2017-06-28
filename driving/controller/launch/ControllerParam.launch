@@ -1,0 +1,38 @@
+<launch>
+  <param name="/driving/controller/hz" 			value="20.0" />
+  <param name="/driving/controller/horizon" 		value="20" />
+  <param name="/driving/controller/torque_mode" 	value="true" />
+  <param name="/driving/controller/cost_lon" 		value="100.0" />
+  <param name="/driving/controller/cost_lat" 		value="200.0" />
+  <param name="/driving/controller/cost_theta" 		value="200.0" />
+  <param name="/driving/controller/cost_vx" 		value="40.0" />
+  <param name="/driving/controller/cost_vy" 		value="1.0" />
+  <param name="/driving/controller/cost_theta_dot" 	value="1.0" />
+  <param name="/driving/controller/cost_accel" 		value="10.0" />
+  <param name="/driving/controller/cost_steer" 		value="200.0" />
+  <param name="/driving/controller/cost_delta_accel" 	value="100.0" />
+  <param name="/driving/controller/cost_delta_steer" 	value="10000.0" />
+  <param name="/driving/controller/vel_smooth" 		value="0.4" />
+  <param name="/driving/controller/int_decay" 		value="0.9" />
+  <param name="/driving/controller/k_throttle" 		value="-3.0" />
+  <param name="/driving/controller/d_throttle" 		value="-0.5" />
+  <param name="/driving/controller/i_throttle" 		value="0.0" />
+  <param name="/driving/controller/ff_throttle" 	value="0.0" />
+  <param name="/driving/controller/k_torque" 		value="-6.0" />
+  <param name="/driving/controller/d_torque" 		value="-0.5" />
+  <param name="/driving/controller/i_torque" 		value="0.0" />
+  <param name="/driving/controller/ff_torque" 		value="0.0" />
+  <param name="/driving/controller/throttle_smooth" 	value="0.0" />
+  <param name="/driving/controller/torque_smooth" 	value="0.0" />
+
+  <param name="/driving/controller/p_cte" 		value="2.5" />
+  <param name="/driving/controller/d_cte" 		value="0.0268" />
+  <param name="/driving/controller/k_yawrate" 		value="0.2" />
+  <param name="/driving/controller/k_aggressive" 	value="0.0111" />
+  <param name="/driving/controller/vel_int_cap" 	value="3.0" />
+  <param name="/driving/controller/k_cruise_int" 	value="0.3" />
+  <param name="/driving/controller/k_accel" 		value="0.4" />
+  <param name="/driving/controller/k_decel" 		value="0.5" />
+  <param name="/driving/controller/kp_torque" 		value="0.3" />  # 0.55
+  <param name="/driving/controller/kd_torque" 		value="0.03" /> # 0.02
+</launch>

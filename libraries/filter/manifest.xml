@@ -1,0 +1,19 @@
+<package>
+  <description brief="filter">
+
+     filter
+
+  </description>
+  <author>Stanford Driving</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/filter</url>
+  <depend package="dgcglobal"/>
+  <!--rosdep name="gsl"/-->
+  <export>
+    <cpp cflags="-I${prefix}/include" lflags="-L${prefix}/lib -lfilter"/>
+  </export>
+
+</package>
+
+

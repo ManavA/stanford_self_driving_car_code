@@ -1,0 +1,10 @@
+<stack>
+  <description brief="driving">driving</description>
+  <author>Stanford Driving</author>
+  <license>BSD</license>  
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/driving</url>
+  <depend stack="ros" />
+  <depend stack="libraries" />
+
+</stack>

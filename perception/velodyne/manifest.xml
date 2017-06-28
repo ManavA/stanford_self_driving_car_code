@@ -1,0 +1,28 @@
+<package>
+  <description brief="velodyne">
+
+     velodyne
+
+  </description>
+  <author>Stanford Driving</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/velodyne</url>
+  <rosdep name="zlib"/>
+  <depend package="applanix"/>
+  <depend package="dgcglobal"/>
+  <depend package="asyncwriter"/>
+  <depend package="tf"/>
+  <depend package="driving_common"/>
+  <depend package="nodelet"/>
+  <depend package="geometry_msgs"/>
+  <depend package="pcl"/>
+  <depend package="pcl_ros"/>
+  <export>
+    <cpp cflags="-I${prefix}/include" lflags="-L${prefix}/lib -lvelo_support -lvelocore"/>
+    <nodelet plugin="${prefix}/nodelet_velodyne.xml"/>
+  </export>
+
+</package>
+
+

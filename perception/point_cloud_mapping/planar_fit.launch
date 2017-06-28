@@ -1,0 +1,36 @@
+<launch>
+
+  <!-- If search_radius_or_knn is different than 0, we estimate point normals using either a radius (1) or k (2) -->
+  <param name="/planar_fit/search_radius_or_knn" value="2" />
+  <param name="/planar_fit/search_radius"        value="0.02" />
+  <param name="/planar_fit/search_k_closest"     value="40" />
+
+  <!-- Use downsampling if the data is too dense and the nearest neighborhood searches for normal estimation take too long -->
+  <param name="/planar_fit/downsample"              value="1" />
+  <param name="/planar_fit/downsample_leaf_width_x" value="0.01" />
+  <param name="/planar_fit/downsample_leaf_width_y" value="0.01" />
+  <param name="/planar_fit/downsample_leaf_width_z" value="0.01" />
+  <!-- Use the original data for normal estimation -->
+  <param name="/planar_fit/normals_high_fidelity"   value="0" />
+
+  <!-- Euclidean (with normal checks) clustering parameters -->
+   <param name="/planar_fit/use_clustering"                       value="0" />
+   <param name="/planar_fit/euclidean_cluster_angle_tolerance"    value="30" />
+   <param name="/planar_fit/euclidean_cluster_min_pts"            value="500" />
+   <param name="/planar_fit/euclidean_cluster_distance_tolerance" value="0.1" />
+
+  <!-- Planar fitting parameters -->
+  <param name="/planar_fit/sac_distance_threshold" value="0.02" />
+  <param name="/planar_fit/sac_maximum_iterations" value="100" />
+  <param name="~sac_use_normals" value="1" />
+  <param name="~sac_normal_distance_weight" value="0.05" />
+  <!-- don't use normals to find inliers -->
+  <param name="~sac_normal_inlier_distance_weight" value="0.0" />
+
+  <!-- Display normal lines as markers -->
+  <param name="/planar_fit/display_normal_lines_as_markers" value = "1" />
+
+  <node pkg="point_cloud_mapping" type="planar_fit_node" name="planar_fit" output="screen" respawn="true">
+    <remap from="tilt_laser_cloud" to="/narrow_stereo/points" />
+  </node>
+</launch>

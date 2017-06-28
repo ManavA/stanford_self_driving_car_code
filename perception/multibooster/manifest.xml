@@ -1,0 +1,20 @@
+<package>
+  <description brief="multibooster">
+
+    MultiBooster is a multi-class, multi-descriptor boosting algorithm which uses hypersphere weak classifiers.
+
+  </description>
+  <author>Stanford Driving</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/multibooster</url>
+  <depend package="eigen"/>
+  <depend package="pipeline"/>
+  <depend package="qpOASES"/>
+  <export>
+    <cpp cflags="-I${prefix}/include" lflags="-L${prefix}/lib -Wl,-rpath ${prefix}/lib -lmultibooster -lname_mapping"/>
+  </export>
+
+</package>
+
+

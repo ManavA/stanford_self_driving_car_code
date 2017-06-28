@@ -1,0 +1,20 @@
+<package>
+  <description brief="carlist">
+
+     carlist
+
+  </description>
+  <author>Stanford Driving</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/carlist</url>
+  <depend package="dgcglobal" />
+  <depend package="driving_common" />
+  <depend package="perception" />
+  <export>
+    <cpp cflags="-I${prefix}/include" lflags="-L${prefix}/lib -lcarlist"/>
+  </export>
+
+</package>
+
+

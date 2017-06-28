@@ -1,0 +1,19 @@
+<package>
+  <description brief="pipeline">
+
+     pipeline
+
+  </description>
+  <author>Stanford Driving</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/pipeline</url>
+  <depend package="eigen"/>
+  <export>
+    <cpp cflags="-I${prefix}/include `rosboost-cfg --cflags`" lflags="-lpthread -L${prefix}/lib -Wl,-rpath ${prefix}/lib -lpipeline"/>
+  </export>
+
+  
+</package>
+
+

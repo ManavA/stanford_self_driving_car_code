@@ -1,0 +1,5 @@
+<launch>
+  <include file="$(find estop)/launch/EStopParam.launch" />
+  <node name="estop" pkg="estop" type="fake_estop" output="screen" launch-prefix="xterm -e" args="-i">
+  </node>
+</launch>

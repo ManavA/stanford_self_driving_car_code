@@ -1,0 +1,19 @@
+<package>
+  <description brief="polytraj">
+
+     polytraj
+
+  </description>
+  <author>Stanford Driving</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/polytraj</url>
+  <depend package="dgcglobal"/>
+  <depend package="driving_common"/>
+  <export>
+    <cpp cflags="-I${prefix}/include" lflags="-L${prefix}/lib -lpoly_traj"/>
+  </export>
+
+</package>
+
+

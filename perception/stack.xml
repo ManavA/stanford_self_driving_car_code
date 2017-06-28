@@ -1,0 +1,11 @@
+<stack>
+  <description brief="perception">perception</description>
+  <author>Stanford Driving</author>
+  <license>BSD</license>  
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/perception</url>
+  <depend stack="ros" />
+  <depend stack="libraries" />
+  <depend stack="driving" />
+
+</stack>

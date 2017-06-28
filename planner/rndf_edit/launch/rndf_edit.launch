@@ -1,0 +1,4 @@
+<launch>
+  <node name="rndf_edit" pkg="rndf_edit" type="rndf_edit" output="screen">
+  </node>
+</launch>

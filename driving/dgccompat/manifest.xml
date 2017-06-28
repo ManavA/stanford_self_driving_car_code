@@ -1,0 +1,22 @@
+<package>
+  <description brief="dgccompat">
+
+     dgccompat
+
+  </description>
+  <author>Stanford Driving</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/dgccompat</url>
+  <depend package="roscpp"/>
+  <depend package="dgclogger"/>
+  <depend package="driving_common"/>
+  <depend package="applanix"/>
+  <depend package="velodyne"/>
+  <depend package="opencv2"/>
+  <depend package="cv_bridge"/>
+  <depend package="image_transport"/>
+
+</package>
+
+

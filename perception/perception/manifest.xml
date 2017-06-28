@@ -1,0 +1,36 @@
+<package>
+  <description brief="perception">
+
+     perception
+
+  </description>
+  <author>Stanford Driving</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/perception</url>
+  <depend package="grid"/>
+  <depend package="driving_common"/>
+  <depend package="multibooster"/>
+  <depend package="linear_kalman_filter"/>
+  <depend package="descriptors_3d"/>
+  <depend package="descriptors_2d"/>
+  <depend package="cluster_descriptors"/>
+  <depend package="pipeline"/>
+  <depend package="sensor_msgs"/> 
+  <depend package="opencv2"/>
+  <depend package="point_cloud_mapping"/>
+  <depend package="applanix"/>
+  <depend package="localize"/>
+  <depend package="velodyne"/>
+  <depend package="filter"/>
+  <depend package="aw_rndf"/>
+  <depend package="gls"/>
+  <depend package="velodyne"/>
+
+  <export>
+    <cpp cflags="-I${prefix}/include" />
+  </export>
+  
+</package>
+
+

@@ -1,0 +1,15 @@
+MDF_name	shortloop_mdf.txt
+RNDF	shortloop_left_rndf.txt
+format_version	1.0
+creation_date	9/19/2006
+checkpoints	
+num_checkpoints	3
+22
+17
+13
+end_checkpoints
+speed_limits
+num_speed_limits	1
+1	0	30
+end_speed_limits
+end_file

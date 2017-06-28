@@ -1,0 +1,22 @@
+<package>
+  <description brief="imagery">
+
+     imagery
+
+  </description>
+  <author>Stanford Driving</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/imagery</url>
+  <depend package="glsupport"/>
+  <depend package="lltransform"/>
+  <depend package="dgcglobal"/>
+  <depend package="socket"/>
+  <depend package="opencv2"/>
+  <export>
+    <cpp cflags="-I${prefix}/include" lflags="-L${prefix}/lib -limagery"/>
+  </export>
+
+</package>
+
+

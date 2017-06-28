@@ -1,0 +1,22 @@
+<package>
+  <description brief="aw_topology">
+
+     aw_topology
+
+  </description>
+  <author>Stanford Driving</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/aw_topology</url>
+  <depend package="dgcglobal"/>
+  <depend package="aw_rndf"/>
+  <depend package="curvesmoothing"/>
+  <depend package="driving_common"/>
+  <depend package="perception"/>
+  <export>
+    <cpp cflags="-I${prefix}/include" lflags="-L${prefix}/lib -law_topology"/>
+  </export>
+
+</package>
+
+

@@ -1,0 +1,39 @@
+<package>
+  <description brief="ANN">
+
+    ANN is a library written in C++, which supports data structures and
+    algorithms for both exact and approximate nearest neighbor searching in
+    arbitrarily high dimensions.
+
+    In the nearest neighbor problem a set of data points in d-dimensional
+    space is given. These points are preprocessed into a data structure, so
+    that given any query point q, the nearest or generally k nearest points of
+    P to q can be reported efficiently. The distance between two points can be
+    defined in many ways. ANN assumes that distances are measured using any
+    class of distance functions called Minkowski metrics. These include the
+    well known Euclidean distance, Manhattan distance, and max distance.
+
+    Based on our own experience, ANN performs quite efficiently for point sets
+    ranging in size from thousands to hundreds of thousands, and in dimensions
+    as high as 20. (For applications in significantly higher dimensions, the
+    results are rather spotty, but you might try it anyway.)
+
+    The library implements a number of different data structures, based on
+    kd-trees and box-decomposition trees, and employs a couple of different
+    search strategies.
+
+    The library also comes with test programs for measuring the quality of
+    performance of ANN on any particular data sets, as well as programs for
+    visualizing the structure of the geometric data structures. 
+
+  </description>
+
+  <author>Sunil Arya and David Mount</author>
+  <license>LGPL</license>
+  <review status="3rdparty" notes=""/>
+  <url>http://www.cs.umd.edu/~mount/ANN/</url>
+  <export>
+    <cpp cflags="-I${prefix}/build/ann_1.1.1/include" lflags="-Wl,-rpath,${prefix}/build/ann_1.1.1/lib -L${prefix}/build/ann_1.1.1/lib -lANN" />
+    <doxymaker external="http://www.cs.umd.edu/~mount/ANN/Files/1.1.1/ANNmanual_1.1.1.pdf"/>
+  </export>
+</package>

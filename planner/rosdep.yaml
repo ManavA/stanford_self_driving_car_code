@@ -1,0 +1,10 @@
+qwt5_qt4:
+  ubuntu: libqwt5-qt4-dev
+  macports: qwt-devel
+ftgl:
+  ubuntu: libftgl-dev
+  macports: ftgl
+glut:
+    macports: glut
+graphviz:
+    macports: graphviz

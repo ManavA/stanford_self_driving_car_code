@@ -1,0 +1,4 @@
+<launch>
+  <param name="/driving/estop/enable_siren" value="false" />
+  <param name="/driving/estop/start_in_run_mode" value="false" />
+</launch>

@@ -1,0 +1,9 @@
+<stack>
+  <description brief="libraries">libraries</description>
+  <author>Stanford Driving</author>
+  <license>BSD</license>  
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/libraries</url>
+  <depend stack="ros" />
+
+</stack>

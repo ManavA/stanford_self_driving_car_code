@@ -1,0 +1,7 @@
+<launch>
+  <param name="/normal_estimation/downsample" value="0" />
+
+  <node pkg="point_cloud_mapping" type="normal_estimation_node" name="normal_estimation" output="screen" respawn="true">
+    <remap from="tilt_laser_cloud" to="cloud_pcd" />
+  </node>
+</launch>

@@ -1,0 +1,18 @@
+<package>
+  <description brief="rndf_edit">
+
+     rndf_edit
+
+  </description>
+  <author>Stanford Driving</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/rndf_edit</url>
+  <depend package="aw_chsm_planning"/>
+  <depend package="driving_common"/>
+  <depend package="imagery"/>
+  <depend package="polytraj"/>
+  <rosdep name="qwt5_qt4"/>
+</package>
+
+

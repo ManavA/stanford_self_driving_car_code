@@ -1,0 +1,12 @@
+Header header
+float64 timestamp
+int32   source
+float64 corrected_x
+float64 corrected_y
+string utmzone
+float64 x_offset
+float64 y_offset
+float32 std_x
+float32 std_y
+float32 std_f
+float32 std_s
